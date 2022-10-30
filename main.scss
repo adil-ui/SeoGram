@@ -1,0 +1,296 @@
+
+$primary: #6C55F9;
+$black:#1d1919;
+$gray:#b69cb0;
+$title_small_color:#898798;
+$title_big_color:#645F88;
+$green:#35bb78;
+$para_color:#acb5c7;
+$btn_price_color:#b8b4d5;
+
+@font-face {
+    font-family: "WorkSans";
+    src: url(font/WorkSans-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: WorkSans,sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+button{
+    cursor: pointer;
+}
+.btn{
+    color: white;
+    background-color: $primary;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: .5s;
+    border: none;
+    text-decoration: none;
+}
+p{
+    color: $title_big_color;
+    line-height: 1.5;
+}
+.btn:hover{
+    background-color: $title_big_color;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    margin-bottom: 20px;
+    .logo a{
+        color: $black;
+        font-weight: 900;
+        font-size: 22px;
+        span{
+            color: $primary;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $gray;
+    }
+    .navbar{
+        width: 50%;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        li{
+            list-style: none;
+        }
+        & li:first-child a{
+            color: $primary;
+        }
+        a:hover{
+            color: darken($gray, 10);
+        }
+        .btn_nav{
+            @extend .btn;
+            font-size: 14px;
+        }
+    }
+   
+}
+
+header{
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        background-color: #F6F5FC;
+        padding: 0 50px;
+        border-radius: 30px;
+        position: relative;
+        & a{
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translate(-50%);
+            background-color: white;
+            padding: 12px 8px;
+            border-radius: 50px;
+            color: $gray;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.199);
+            transition: .5s;
+        }
+        & a:hover{
+            background-color: $primary;
+            color: white;
+        }
+        .hero_img {
+            width:40%;
+            img{
+                width: 100%;
+            }
+        }
+        .hero_text {
+            width: 50%;
+            h1{
+                color: $title_big_color;
+                font-size: 38px;
+            }
+            p{
+                margin: 30px 0 60px;
+                line-height: 1.3;
+                font-size: 20px;
+            }
+            .btn_hero{
+                @extend .btn;
+                border-radius: 50px;
+                padding: 8px 10px 8px 20px;
+                
+                i{
+                    font-size: 30px;
+                    vertical-align: middle;
+                    margin-left: 10px;
+
+                }
+            }
+        }
+        
+    }
+}
+
+//*****************************************   SEO  ****************************************
+
+
+.seo{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 8%;
+    padding: 50px 0;
+    .seo_container{
+        text-align: center;
+        padding: 40px 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.091)       
+    }
+    img{
+        width: 40%;
+    }
+    h3{
+        color: $title_big_color;
+        margin-top: 20px;
+    }
+    p{
+        margin:20px 0 ; 
+    }
+   
+}
+
+//*****************************************   ABOUT  ****************************************
+.title_1{
+    color: $title_small_color;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.title_2{
+    color: $title_big_color;
+    margin: 10px 0;
+    font-size: 32px;
+
+}
+#about{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    .about_text{
+        
+        p{
+            margin: 10px 0;
+        }
+        p:first-of-type{
+            margin-top: 50px;
+        }
+        & button{
+            margin-top: 20px;
+        }
+    }
+}
+//*****************************************   SERVICE  ****************************************
+
+#service{
+    background-color: #F6F5FC;
+    padding: 50px 0 100px;
+    text-align: center;
+    h2{
+        margin-bottom: 80px;
+    }
+    .service_container{
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        
+        .service_icon{
+            color:$primary;
+            font-size: 24px;
+            background-color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.091);
+            margin: 10px auto;
+        }
+        h5{
+            font-size: 20px;
+            font-weight: 400;
+            margin: 10px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
+
+//*****************************************   STRATEGY  ****************************************
+
+.strategy{
+    background-image: url(images/bg_pattern.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    background-color: #5439F8;
+    .strategy_container{
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .strategy_text{
+            width: 55%;
+            h2, p, li{
+            color: white;
+            margin: 10px 0;
+            }           
+            h2{
+                margin-bottom: 30px;
+                width: 80%;
+                line-height: 1.5;
+            }
+            ul{
+                margin-left: 40px;
+                margin-top: 20px;
+            }
+        }
+        .strategy_img{
+            width: 40%;
+        }
+        
+    }
+}
+
+//*****************************************   CONTACT  ****************************************

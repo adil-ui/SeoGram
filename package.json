@@ -1,0 +1,11 @@
+{
+  "name": "seogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch main.scss style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

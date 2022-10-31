@@ -28,20 +28,20 @@ button {
   border: none;
   text-decoration: none;
 }
+.btn:hover, header .hero .hero_text .btn_hero:hover, nav .navbar .btn_nav:hover {
+  background-color: #645F88;
+  color: white;
+}
 
 p {
   color: #645F88;
   line-height: 1.5;
 }
 
-.btn:hover, header .hero .hero_text .btn_hero:hover, nav .navbar .btn_nav:hover {
-  background-color: #645F88;
-  color: white;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 25px 0;
   margin-bottom: 20px;
 }
@@ -146,6 +146,7 @@ header .hero .hero_text .btn_hero i {
   margin: auto;
   display: grid;
   grid-template-columns: 4fr 4fr 4fr;
+  grid-template-rows: 1fr;
   gap: 8%;
   padding: 50px 0;
 }
@@ -153,7 +154,7 @@ header .hero .hero_text .btn_hero i {
   text-align: center;
   padding: 40px 30px;
   border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.091);
+  box-shadow: 0px 0px 5px rgba(112, 112, 112, 0.215);
 }
 .seo img {
   width: 40%;
@@ -179,11 +180,11 @@ header .hero .hero_text .btn_hero i {
 }
 
 #about {
-  width: 70%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
+  margin: auto;
   padding: 100px 0;
 }
 #about .about_text p {
@@ -210,6 +211,7 @@ header .hero .hero_text .btn_hero i {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr 3fr;
   grid-template-rows: 1fr 1fr;
+  gap: 30px;
   gap: 30px;
 }
 #service .service_container .service_icon {
@@ -242,11 +244,11 @@ header .hero .hero_text .btn_hero i {
   background-color: #5439F8;
 }
 .strategy .strategy_container {
-  width: 70%;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 70%;
+  margin: auto;
 }
 .strategy .strategy_container .strategy_text {
   width: 55%;
